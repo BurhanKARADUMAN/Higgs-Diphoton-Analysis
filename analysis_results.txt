@@ -1,0 +1,226 @@
+
+Processing higgs_diphoton_analysis.C...
+
+[INFO] Data         entries: 7798424 (Tree: mini)
+[INFO] MC           entries: 2473335 (Tree: mini)
+[INFO] FullData     entries: (Bypassed to prevent format corruption crash)
+
+[STEP 2] Preselected baseline events: 148264
+[STEP 2] S0 = 0.0,  B0 = 24663.7,  S0/sqrt(B0) = 0.00
+[STEP 2] Fig1 saved.
+[STEP 2] Fig7 saved.
+[STEP 3] Signal tree: 1666197 entries
+[STEP 3] Background tree: 96016 entries
+DataSetInfo              : [tmva_output/dataset] : Added class "Signal"
+                         : Add Tree sig of type Signal with 1666197 events
+DataSetInfo              : [tmva_output/dataset] : Added class "Background"
+                         : Add Tree bkg of type Background with 96016 events
+                         : Dataset[tmva_output/dataset] : Class index : 0  name : Signal
+                         : Dataset[tmva_output/dataset] : Class index : 1  name : Background
+Factory                  : Booking method: [1mBDT[0m
+                         : 
+                         : the option NegWeightTreatment=InverseBoostNegWeights does not exist for BoostType=Grad
+                         : --> change to new default NegWeightTreatment=Pray
+                         : Rebuilding Dataset tmva_output/dataset
+                         : Building event vectors for type 2 Signal
+                         : Dataset[tmva_output/dataset] :  create input formulas for tree sig
+                         : Building event vectors for type 2 Background
+                         : Dataset[tmva_output/dataset] :  create input formulas for tree bkg
+DataSetFactory           : [tmva_output/dataset] : Number of events in input trees
+                         : 
+                         : 
+                         : Number of training and testing events
+                         : ---------------------------------------------------------------------------
+                         : Signal     -- training events            : 50000
+                         : Signal     -- testing events             : 50000
+                         : Signal     -- training and testing events: 100000
+                         : Background -- training events            : 20000
+                         : Background -- testing events             : 20000
+                         : Background -- training and testing events: 40000
+                         : 
+DataSetInfo              : Correlation matrix (Signal):
+                         : -----------------------------------------------------------------------------------
+                         :           pt1_norm pt2_norm   aeta1   aeta2   adeta   adphi   costh    iso1    iso2
+                         : pt1_norm:   +1.000   +0.320  -0.059  -0.038  -0.292  -0.599  -0.113  -0.021  -0.014
+                         : pt2_norm:   +0.320   +1.000  -0.036  -0.049  -0.419  -0.348  -0.214  -0.012  -0.051
+                         :    aeta1:   -0.059   -0.036  +1.000  +0.232  +0.041  +0.029  +0.023  -0.026  +0.006
+                         :    aeta2:   -0.038   -0.049  +0.232  +1.000  +0.056  +0.002  +0.045  +0.009  -0.037
+                         :    adeta:   -0.292   -0.419  +0.041  +0.056  +1.000  -0.164  +0.950  +0.009  +0.016
+                         :    adphi:   -0.599   -0.348  +0.029  +0.002  -0.164  +1.000  -0.385  +0.025  +0.032
+                         :    costh:   -0.113   -0.214  +0.023  +0.045  +0.950  -0.385  +1.000  +0.003  +0.004
+                         :     iso1:   -0.021   -0.012  -0.026  +0.009  +0.009  +0.025  +0.003  +1.000  +0.010
+                         :     iso2:   -0.014   -0.051  +0.006  -0.037  +0.016  +0.032  +0.004  +0.010  +1.000
+                         : -----------------------------------------------------------------------------------
+DataSetInfo              : Correlation matrix (Background):
+                         : -----------------------------------------------------------------------------------
+                         :           pt1_norm pt2_norm   aeta1   aeta2   adeta   adphi   costh    iso1    iso2
+                         : pt1_norm:   +1.000   +0.051  -0.028  -0.006  -0.529  -0.288  -0.470  -0.064  -0.005
+                         : pt2_norm:   +0.051   +1.000  -0.044  -0.004  -0.614  -0.018  -0.526  -0.037  -0.089
+                         :    aeta1:   -0.028   -0.044  +1.000  -0.065  +0.057  -0.030  +0.049  +0.001  +0.021
+                         :    aeta2:   -0.006   -0.004  -0.065  +1.000  +0.011  -0.024  +0.009  +0.016  -0.005
+                         :    adeta:   -0.529   -0.614  +0.057  +0.011  +1.000  -0.220  +0.981  +0.069  +0.040
+                         :    adphi:   -0.288   -0.018  -0.030  -0.024  -0.220  +1.000  -0.332  -0.009  +0.057
+                         :    costh:   -0.470   -0.526  +0.049  +0.009  +0.981  -0.332  +1.000  +0.066  +0.028
+                         :     iso1:   -0.064   -0.037  +0.001  +0.016  +0.069  -0.009  +0.066  +1.000  +0.037
+                         :     iso2:   -0.005   -0.089  +0.021  -0.005  +0.040  +0.057  +0.028  +0.037  +1.000
+                         : -----------------------------------------------------------------------------------
+DataSetFactory           : [tmva_output/dataset] :  
+                         : 
+Factory                  : [1mTrain all methods[0m
+Factory                  : [tmva_output/dataset] : Create Transformation "I" with events from all classes.
+                         : 
+                         : Transformation, Variable selection : 
+                         : Input : variable 'pt1_norm' <---> Output : variable 'pt1_norm'
+                         : Input : variable 'pt2_norm' <---> Output : variable 'pt2_norm'
+                         : Input : variable 'aeta1' <---> Output : variable 'aeta1'
+                         : Input : variable 'aeta2' <---> Output : variable 'aeta2'
+                         : Input : variable 'adeta' <---> Output : variable 'adeta'
+                         : Input : variable 'adphi' <---> Output : variable 'adphi'
+                         : Input : variable 'costh' <---> Output : variable 'costh'
+                         : Input : variable 'iso1' <---> Output : variable 'iso1'
+                         : Input : variable 'iso2' <---> Output : variable 'iso2'
+TFHandler_Factory        : Variable        Mean        RMS   [        Min        Max ]
+                         : -----------------------------------------------------------
+                         : pt1_norm:    0.59811    0.22739   [    0.35001     8.7079 ]
+                         : pt2_norm:    0.40226    0.10185   [    0.25000     2.8469 ]
+                         :    aeta1:    0.91819    0.62612   [ 3.1103e-05     2.3697 ]
+                         :    aeta2:    0.92239    0.62495   [ 0.00014419     2.3700 ]
+                         :    adeta:    0.85851    0.57121   [ 1.7196e-05     2.5462 ]
+                         :    adphi:     2.5814    0.62795   [ 0.00057411     3.1416 ]
+                         :    costh:    0.19906    0.12201   [ 3.4762e-06    0.49998 ]
+                         :     iso1:    0.30574     1.1174   [    -9.1681     3.9994 ]
+                         :     iso2:    0.43912     1.1392   [    -20.096     4.0000 ]
+                         : -----------------------------------------------------------
+                         : Ranking input variables (method unspecific)...
+IdTransformation         : Ranking result (top variable is best ranked)
+                         : -------------------------------------------------
+                         : Rank : Variable                 : Separation
+                         : -------------------------------------------------
+                         :    1 : p_{T,2}/m_{#gamma#gamma} : 6.209e-02
+                         :    2 : |#Delta#eta|             : 4.698e-02
+                         :    3 : p_{T,1}/m_{#gamma#gamma} : 4.392e-02
+                         :    4 : E_{T}^{iso}(2) [GeV]     : 3.688e-02
+                         :    5 : cos#theta*               : 3.331e-02
+                         :    6 : |#Delta#phi|             : 3.209e-02
+                         :    7 : E_{T}^{iso}(1) [GeV]     : 1.396e-02
+                         :    8 : |#eta_{1}|               : 3.410e-03
+                         :    9 : |#eta_{2}|               : 3.108e-03
+                         : -------------------------------------------------
+Factory                  : Train method: BDT for Classification
+                         : 
+<WARNING>                : Events with negative event weights are USED during the BDT training. This might cause problems with small node sizes or with the boosting. Please remove negative events from training using the option *IgnoreEventsWithNegWeightsInTraining* in case you observe problems with the boosting
+                         : Events with weight == 0 are going to be simply ignored 
+BDT                      : #events: (reweighted) sig: 34994.5 bkg: 34994.5
+                         : #events: (unweighted) sig: 49989 bkg: 20000
+                         : Training 200 Decision Trees ... patience please
+                         : Elapsed time for training with 70000 events: [1;31m55 sec[0m         
+BDT                      : [tmva_output/dataset] : Evaluation of BDT on training sample (70000 events)
+                         : Elapsed time for evaluation of 70000 events: [1;31m4.23 sec[0m       
+                         : Creating xml weight file: [0;36mtmva_output/dataset/weights/TMVAClassif_BDT.weights.xml[0m
+                         : Creating standalone class: [0;36mtmva_output/dataset/weights/TMVAClassif_BDT.class.C[0m
+                         : tmva_output/TMVA.root:/tmva_output/dataset/Method_BDT/BDT
+Factory                  : Training finished
+                         : 
+                         : Ranking input variables (method specific)...
+BDT                      : Ranking result (top variable is best ranked)
+                         : ------------------------------------------
+                         : Rank : Variable  : Variable Importance
+                         : ------------------------------------------
+                         :    1 : iso2      : 1.460e-01
+                         :    2 : adphi     : 1.313e-01
+                         :    3 : aeta2     : 1.229e-01
+                         :    4 : iso1      : 1.209e-01
+                         :    5 : adeta     : 1.206e-01
+                         :    6 : pt2_norm  : 1.205e-01
+                         :    7 : aeta1     : 1.025e-01
+                         :    8 : costh     : 8.340e-02
+                         :    9 : pt1_norm  : 5.194e-02
+                         : ------------------------------------------
+Factory                  : === Destroy and recreate all methods via weight files for testing ===
+                         : 
+                         : Reading weight file: [0;36mtmva_output/dataset/weights/TMVAClassif_BDT.weights.xml[0m
+Factory                  : [1mTest all methods[0m
+Factory                  : Test method: BDT for Classification performance
+                         : 
+BDT                      : [tmva_output/dataset] : Evaluation of BDT on testing sample (70000 events)
+                         : Elapsed time for evaluation of 70000 events: [1;31m3.45 sec[0m       
+Factory                  : [1mEvaluate all methods[0m
+Factory                  : Evaluate classifier: BDT
+                         : 
+BDT                      : [tmva_output/dataset] : Loop over test events and fill histograms with classifier response...
+                         : 
+TFHandler_BDT            : Variable        Mean        RMS   [        Min        Max ]
+                         : -----------------------------------------------------------
+                         : pt1_norm:    0.61616    0.24089   [    0.35001     7.1718 ]
+                         : pt2_norm:    0.41329    0.10791   [    0.25000     3.4732 ]
+                         :    aeta1:    0.90809    0.62423   [ 3.9124e-05     2.3699 ]
+                         :    aeta2:    0.92589    0.63117   [ 3.8105e-05     2.3699 ]
+                         :    adeta:    0.78796    0.54203   [ 7.0855e-06     2.5566 ]
+                         :    adphi:     2.5389    0.64807   [ 1.4305e-06     3.1416 ]
+                         :    costh:    0.18737    0.12032   [ 2.9687e-06    0.50000 ]
+                         :     iso1:    0.24652     1.0831   [    -7.5799     3.9996 ]
+                         :     iso2:    0.33024     1.0552   [    -4.4182     3.9996 ]
+                         : -----------------------------------------------------------
+                         : 
+                         : Evaluation results ranked by best signal efficiency and purity (area)
+                         : -------------------------------------------------------------------------------------------------------------------
+                         : DataSet       MVA                       
+                         : Name:         Method:          ROC-integ
+                         : tmva_output/dataset BDT            : 0.703
+                         : -------------------------------------------------------------------------------------------------------------------
+                         : 
+                         : Testing efficiency compared to training efficiency (overtraining check)
+                         : -------------------------------------------------------------------------------------------------------------------
+                         : DataSet              MVA              Signal efficiency: from test sample (from training sample) 
+                         : Name:                Method:          @B=0.01             @B=0.10            @B=0.30   
+                         : -------------------------------------------------------------------------------------------------------------------
+                         : tmva_output/dataset  BDT            : 0.072 (0.070)       0.283 (0.297)      0.580 (0.595)
+                         : -------------------------------------------------------------------------------------------------------------------
+                         : 
+Dataset:tmva_output/da...: Created tree 'TestTree' with 70000 events
+                         : 
+Dataset:tmva_output/da...: Created tree 'TrainTree' with 70000 events
+                         : 
+Factory                  : [1mThank you for using TMVA![0m
+                         : [1mFor citation information, please visit: http://tmva.sf.net/citeTMVA.html[0m
+[STEP 4] TMVA training done.
+                         : Booking "BDT" of type "BDT" from tmva_output/dataset/weights/TMVAClassif_BDT.weights.xml.
+                         : Reading weight file: tmva_output/dataset/weights/TMVAClassif_BDT.weights.xml
+<HEADER> DataSetInfo              : [Default] : Added class "Signal"
+<HEADER> DataSetInfo              : [Default] : Added class "Background"
+                         : Booked classifier "BDT" of type: "BDT"
+                         : Rebuilding Dataset Default
+[STEP 5] Preselected events for BDT: 148264
+[STEP 5] Optimal BDT cut = 0.6764,  S=44.1,  B=159.2,  S/sqrt(B)=3.49
+[STEP 5] Fig2 saved.
+[STEP 6] Events passing BDT cut: 1119
+[STEP 6] Fig4 saved.
+[STEP 6] Fig3 saved.
+[STEP 7] Bypassing format-corrupted FullData. Using Data sample (7.7M entries) with loose cut -0.105
+[STEP 7] Large-stats entries passed cut: 72150
+[STEP 7] Fig5 saved.
+[STEP 8] Fig6 saved.
+[STEP 9] Fig8 saved.
+
+[34m╔══════════════════════════════════════════════════════════════╗
+[0m[34m║[33m[1m                   PERFORMANCE TABLE                          [34m║
+[0m[34m╠══════════════════════════════════════════════════════════════╣
+[0m[34m║[36m Method     S        B        S/√B    ε       P       εP      [34m║
+[0m[34m║──────────────────────────────────────────────────────────────║
+[0m[34m║[0m Cut-based     0.0  24663.7   0.00  1.000  0.0000  0.0000    [34m║
+[0m[34m║[32m[1m BDT          44.0    159.2   3.49  102814261.662  0.2166  22274282.4803    [34m║
+[0m[34m╚══════════════════════════════════════════════════════════════╝
+
+[0m[34m╔══════════════════════════════════════════════════════╗
+[0m[34m║[33m[1m              FINAL RESULTS SUMMARY                   [34m║
+[0m[34m╠══════════════════════════════════════════════════════╣
+[0m[34m║[0m  S0  (cut-based, signal region)  = [31m0.0
+[0m[34m║[0m  Optimal BDT threshold           = [36m0.6764
+[0m[34m║[0m  S   (BDT fit, signal region)    = [32m44.0
+[0m[34m║[0m  B   (BDT fit, signal region)    = [33m159.2
+[0m[34m║[0m  S/√B                            = [32m[1m3.49
+[0m[34m║[0m  Fitted peak position            = [36m125.54 GeV
+[0m[34m║[0m  Fitted peak sigma               = [36m0.93 GeV
+[0m[34m╚══════════════════════════════════════════════════════╝
+
+[0m
