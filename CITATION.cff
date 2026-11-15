@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite this repository if you reuse its research code or documentation."
+title: "Higgs Diphoton Analysis: ROOT/TMVA historical project and a reproducible educational review toolkit"
+authors:
+  - family-names: Karaduman
+    given-names: Burhan
+    affiliation: Middle East Technical University
+repository-code: https://github.com/BurhanKARADUMAN/Higgs-Diphoton-Analysis
+keywords:
+  - Higgs boson
+  - diphoton
+  - ATLAS Open Data
+  - ROOT
+  - TMVA
+  - particle physics
+  - statistical inference

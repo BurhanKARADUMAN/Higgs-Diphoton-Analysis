@@ -1,0 +1,21 @@
+{
+  "source": "demo",
+  "input_files": [],
+  "data_status": "synthetic-demo",
+  "unblinded": true,
+  "hypothesis_mass_GeV": 125.09,
+  "fit_status": "exploratory-fixed-mass",
+  "model_limitations": "Fixed Gaussian shape; exponential background; no systematics, trials factor, or official ATLAS likelihood.",
+  "fit": {
+    "z_local_asymptotic": 8.681261940364976,
+    "q0": 75.36430887722946,
+    "signal_yield": 372.0000050248343,
+    "bg_yield": 12033.539142030942,
+    "log_background_rate_at_125": 5.3269143006186335,
+    "background_slope_per_GeV": -0.027747152842014174,
+    "converged": true,
+    "observed_counts": 12400,
+    "mass_hypothesis_GeV": 125.09,
+    "resolution_sigma_GeV": 1.7
+  }
+}
